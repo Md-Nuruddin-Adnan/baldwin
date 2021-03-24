@@ -1,0 +1,30 @@
+.newsletter {
+  padding: 80px 0;
+  background: url(../images/newsletter.jpg) no-repeat center center/cover;
+  text-align: center;
+
+  .section-heading h2 {
+    color: $white;
+  }
+
+  form {
+    padding: 40px 0;
+    .btn,
+    .form-control {
+      border-radius: 0;
+  
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+  
+    .btn-dark {
+      font-family: serif;
+      font-size: 16px;
+    }
+  }
+
+  p {
+    color: $white;
+  }
+}

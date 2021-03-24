@@ -1,0 +1,28 @@
+.categories {
+  padding: 60px 0;
+
+  .category-full {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) );
+    @media(max-width: 767px) {
+      grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+    }
+    grid-gap: 30px;
+    .category-item {
+      text-align: center;
+      padding: 30px;
+
+      &:hover {
+        background: #f2efe9;
+      }
+      a {
+        p {
+          font-family: serif;
+          font-size: 20px;
+          font-weight: 500;
+          color: $orange;
+        }
+      }
+    }
+  }
+}

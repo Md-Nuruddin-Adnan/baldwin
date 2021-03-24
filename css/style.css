@@ -1,0 +1,931 @@
+/*=== global css start === */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::after, ::before {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, ol, ul, p, address, strong, i {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+/*===// end of global css === */
+/*=== config css start === */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f7f6f2;
+}
+
+/*===// end of config css === */
+/*=== common css start === */
+.section-heading p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #626262;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.section-heading p span {
+  color: #E27A1F;
+}
+
+.section-heading h2 {
+  font-family: "PT Serif";
+  font-weight: 400;
+  font-size: 50px;
+  color: #000;
+  line-height: 60px;
+}
+
+@media (max-width: 767px) {
+  .section-heading h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+
+/*===// end of common css === */
+/*=== utility css start === */
+/*===// end of utility css === */
+/*=== alert_bar section start === */
+#alert-bar {
+  padding: 15px 0;
+}
+
+@media (max-width: 575px) {
+  #alert-bar {
+    display: none;
+  }
+}
+
+#alert-bar .newsticker-slider .news-item {
+  padding: 15px;
+}
+
+#alert-bar .newsticker-slider .news-item p {
+  font-size: 12px;
+  color: #626262;
+  line-height: 16px;
+}
+
+#alert-bar .newsticker-slider .news-item img {
+  max-width: 40px;
+}
+
+#alert-bar .newsticker-slider .prev-arrow,
+#alert-bar .newsticker-slider .next-arrow {
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 37px;
+  color: #282828;
+  text-align: center;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+#alert-bar .newsticker-slider .prev-arrow:hover,
+#alert-bar .newsticker-slider .next-arrow:hover {
+  color: #E27A1F;
+}
+
+@media (max-width: 767px) {
+  #alert-bar .newsticker-slider .prev-arrow,
+  #alert-bar .newsticker-slider .next-arrow {
+    display: none !important;
+  }
+}
+
+#alert-bar .newsticker-slider .prev-arrow {
+  top: 50%;
+  left: -50px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#alert-bar .newsticker-slider .next-arrow {
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+}
+
+/*===// end of alert_bar section === */
+/*=== navbar section start === */
+.header {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 998;
+}
+
+@media (min-width: 992px) {
+  .header .navbar {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+.header .navbar .navbar-brand {
+  max-height: 110px;
+}
+
+@media (max-width: 991px) {
+  .header .navbar .navbar-brand {
+    width: 150px;
+  }
+}
+
+.header .navbar .navbar-nav .nav-item .nav-link {
+  font-size: 15px;
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: block;
+  position: relative;
+  transition: all 0.2s linear;
+  text-shadow: 2px 2px 5px black;
+}
+
+.header .navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #E27A1F;
+  text-shadow: none;
+}
+
+.header.translate-top {
+  transform: translateY(-120px);
+}
+
+.header.translate-top .navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.header.translate-top .navbar .navbar-brand {
+  max-width: 110px;
+}
+
+@media (min-width: 992px) {
+  .header.translate-top .navbar .navbar-nav .nav-item .nav-link.active::before {
+    content: '';
+    width: 15px;
+    height: 10px;
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(100% 0, 0 0, 50% 75%);
+  }
+}
+
+.header.position-fixed {
+  width: 100%;
+  background: rgba(40, 40, 40, 0.97);
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  transition: all 1s linear;
+}
+
+.header.position-fixed.translate-top {
+  transform: translateY(0px);
+  transition: 0.5s linear;
+}
+
+/*===// end of navbar section === */
+/*=== banner section start === */
+.banner {
+  /* slick slider css start */
+  /* slick slider css end */
+}
+
+.banner .banner-slide .banner-content {
+  padding: 100px 0 100px 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .banner .banner-slide .banner-content {
+    padding: 250px 0 200px 0;
+  }
+}
+
+.banner .banner-slide .banner-content::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner .banner-slide .banner-1 {
+  background: url(../images/banner/banner-1.png) no-repeat right center/cover;
+}
+
+.banner .banner-slide .banner-2 {
+  background: url(../images/banner/banner-2.png) no-repeat center center/cover;
+}
+
+.banner .banner-slide .banner-3 {
+  background: url(../images/banner/banner-3.png) no-repeat center center/cover;
+}
+
+.banner .banner-slide .container {
+  z-index: 2;
+  position: relative;
+}
+
+.banner .banner-slide .container h1 {
+  font-family: "PT Serif";
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 80px;
+  white-space: pre-line;
+  color: #fff;
+  padding: 10px 0 30px 0;
+}
+
+@media (max-width: 991px) {
+  .banner .banner-slide .container h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.banner .banner-slide .container p {
+  font-size: 24px;
+  color: #fff;
+}
+
+.banner .prev-arrow,
+.banner .next-arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 15px;
+  line-height: 37px;
+  color: #fff;
+  text-align: center;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.banner .prev-arrow:hover,
+.banner .next-arrow:hover {
+  color: #E27A1F;
+  border-color: #E27A1F;
+}
+
+.banner .prev-arrow {
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.banner .next-arrow {
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+}
+
+.banner .slick-dots li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.banner .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.banner .slick-dots button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  outline: 0;
+}
+
+.banner .slick-dots .slick-active button {
+  background: #E27A1F;
+  border-color: #E27A1F;
+}
+
+/*===// end of banner section === */
+/*=== newsticker section start === */
+.newsticker {
+  padding: 15px 0;
+}
+
+.newsticker .newsticker-slider .news-item {
+  padding: 15px;
+}
+
+.newsticker .newsticker-slider .news-item p {
+  font-size: 13px;
+  color: #626262;
+  line-height: 19px;
+}
+
+.newsticker .newsticker-slider .news-item img {
+  max-width: 55px;
+}
+
+.newsticker .newsticker-slider .prev-arrow,
+.newsticker .newsticker-slider .next-arrow {
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 37px;
+  color: #282828;
+  text-align: center;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.newsticker .newsticker-slider .prev-arrow:hover,
+.newsticker .newsticker-slider .next-arrow:hover {
+  color: #E27A1F;
+}
+
+@media (max-width: 767px) {
+  .newsticker .newsticker-slider .prev-arrow,
+  .newsticker .newsticker-slider .next-arrow {
+    display: none !important;
+  }
+}
+
+.newsticker .newsticker-slider .prev-arrow {
+  top: 50%;
+  left: -50px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.newsticker .newsticker-slider .next-arrow {
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+}
+
+/*===// end of newsticker section === */
+/*=== fun_map section start === */
+.fun-map {
+  padding: 80px 0;
+}
+
+.fun-map .fun-para {
+  padding: 40px 20px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #626262;
+}
+
+.fun-map .fun-slider {
+  /* slick slider css end */
+}
+
+.fun-map .fun-slider .prev-arrow,
+.fun-map .fun-slider .next-arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 25px;
+  line-height: 37px;
+  color: #fff;
+  text-align: center;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.fun-map .fun-slider .prev-arrow:hover,
+.fun-map .fun-slider .next-arrow:hover {
+  color: #E27A1F;
+  border-color: transparent;
+}
+
+.fun-map .fun-slider .prev-arrow {
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.fun-map .fun-slider .next-arrow {
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+}
+
+.fun-map .fun-slider .slick-dots li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.fun-map .fun-slider .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.fun-map .fun-slider .slick-dots button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  outline: 0;
+}
+
+.fun-map .fun-slider .slick-dots .slick-active button {
+  background: #E27A1F;
+  border-color: #E27A1F;
+}
+
+.fun-map .map h3 {
+  font-family: "PT Serif";
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 000;
+  color: #000;
+  white-space: pre-line;
+  padding-left: 30px;
+}
+
+.fun-map .map .btn-light {
+  background: #eeedea;
+  font-family: serif;
+  font-size: 16px;
+  border-radius: 0;
+  color: #282828;
+  margin: 20px 0;
+  border: none;
+  white-space: nowrap;
+  padding: 12px 25px;
+}
+
+.fun-map .map .btn-light:hover {
+  background: #eae8e5;
+  border: none;
+}
+
+/*===// end of fun_map section === */
+/*=== service-spotlight section start === */
+.service-spotlight {
+  padding: 80px 0;
+}
+
+.service-spotlight .section-heading {
+  padding-bottom: 60px;
+}
+
+.service-spotlight .card .card-image {
+  overflow: hidden;
+}
+
+.service-spotlight .card .card-image a img {
+  transition: all 0.3s linear;
+}
+
+.service-spotlight .card .card-image a:hover img {
+  transform: scale(1.1);
+}
+
+.service-spotlight .card .card-body a {
+  font-family: "PT Serif";
+  font-size: 28px;
+  line-height: 36px;
+  color: #000;
+  font-weight: 400;
+  display: block;
+  margin: 10px 0 20px 0;
+}
+
+.service-spotlight .card .card-body p {
+  font-size: 16px;
+  color: #626262;
+  line-height: 26px;
+  padding-bottom: 10px;
+}
+
+.service-spotlight .service-spotlight-slider {
+  /* slick slider css end */
+}
+
+.service-spotlight .service-spotlight-slider .prev-arrow,
+.service-spotlight .service-spotlight-slider .next-arrow {
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 30px;
+  line-height: 37px;
+  color: #fff;
+  text-align: center;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  display: grid;
+  place-items: center;
+}
+
+.service-spotlight .service-spotlight-slider .prev-arrow:hover,
+.service-spotlight .service-spotlight-slider .next-arrow:hover {
+  color: rgba(40, 40, 40, 0.8);
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.service-spotlight .service-spotlight-slider .prev-arrow {
+  top: 35%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.service-spotlight .service-spotlight-slider .next-arrow {
+  top: 35%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.service-spotlight .service-spotlight-slider .slick-dots li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.service-spotlight .service-spotlight-slider .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.service-spotlight .service-spotlight-slider .slick-dots button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  outline: 0;
+}
+
+.service-spotlight .service-spotlight-slider .slick-dots .slick-active button {
+  background: #E27A1F;
+  border-color: #E27A1F;
+}
+
+/*===// end of service-spotlight section === */
+/*=== fixed_map section start === */
+.fixed-map {
+  margin: 80px 0;
+  height: 100vh;
+  background: url(../images/fixed_map.jpg) no-repeat center center/cover fixed;
+}
+
+/*===// end of fixed_map section === */
+/*=== categories section start === */
+.categories {
+  padding: 60px 0;
+}
+
+.categories .category-full {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 30px;
+}
+
+@media (max-width: 767px) {
+  .categories .category-full {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+.categories .category-full .category-item {
+  text-align: center;
+  padding: 30px;
+}
+
+.categories .category-full .category-item:hover {
+  background: #f2efe9;
+}
+
+.categories .category-full .category-item a p {
+  font-family: serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #E27A1F;
+}
+
+/*===// end of categories section === */
+/*=== about_us section start === */
+.about-us {
+  padding: 80px 0;
+}
+
+.about-us .about-text {
+  padding: 40px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #626262;
+}
+
+.about-us .quote {
+  text-align: center;
+}
+
+.about-us .quote .quote-slider {
+  padding: 60px 0;
+}
+
+.about-us .quote .quote-slider .quote-slider-item blockquote {
+  font-family: "PT Serif", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  color: #282828;
+  line-height: 46px;
+  font-style: italic;
+}
+
+@media (min-width: 992px) {
+  .about-us .quote .quote-slider .quote-slider-item blockquote {
+    padding: 40px;
+  }
+}
+
+.about-us .quote .quote-slider .quote-slider-item .hr_dots {
+  margin-bottom: 15px;
+}
+
+.about-us .quote .quote-slider .quote-slider-item .hr_dots span {
+  color: #E27A1F;
+  background: #E27A1F;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.about-us .quote .quote-slider .quote-slider-item .person {
+  font-size: 20px;
+}
+
+.about-us .quote .quote-slider {
+  /* slick slider css end */
+}
+
+.about-us .quote .quote-slider .slick-dots li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.about-us .quote .quote-slider .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.about-us .quote .quote-slider .slick-dots button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  outline: 0;
+  clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 100%, 0 35%);
+}
+
+.about-us .quote .quote-slider .slick-dots .slick-active button {
+  border-radius: 0;
+  background: #E27A1F;
+  border-color: #E27A1F;
+  clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 100%, 0 35%);
+}
+
+/*===// end of about_us section === */
+/*=== newsletter section start === */
+.newsletter {
+  padding: 80px 0;
+  background: url(../images/newsletter.jpg) no-repeat center center/cover;
+  text-align: center;
+}
+
+.newsletter .section-heading h2 {
+  color: #fff;
+}
+
+.newsletter form {
+  padding: 40px 0;
+}
+
+.newsletter form .btn,
+.newsletter form .form-control {
+  border-radius: 0;
+}
+
+.newsletter form .btn::placeholder,
+.newsletter form .form-control::placeholder {
+  font-size: 16px;
+}
+
+.newsletter form .btn-dark {
+  font-family: serif;
+  font-size: 16px;
+}
+
+.newsletter p {
+  color: #fff;
+}
+
+/*===// end of newsletter section === */
+/*=== side_bar section start === */
+.side-bar {
+  width: 320px;
+  height: 100vh;
+  background: #282828;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: all 0.3s linear;
+  z-index: 99999;
+}
+
+.side-bar.hidden {
+  right: -320px;
+}
+
+.side-bar .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.side-bar .content .toggler-btn {
+  width: 80px;
+  border-radius: 0;
+  background: #000;
+  color: #fff;
+  position: absolute;
+  top: 55%;
+  left: -80px;
+  z-index: 1;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@keyframes opacityChange {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: .75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.side-bar .content .toggler-btn h3 {
+  font-size: 20px;
+  font-weight: 600;
+  animation: opacityChange 2s linear infinite;
+}
+
+.side-bar .content .toggler-btn p {
+  font-size: 12px;
+  font-weight: 500;
+  animation: opacityChange 2s linear infinite;
+}
+
+/*===// end of side_bar section === */
+/*=== ? section start === */
+/*===// end of ? section === */
+/*=== footer section start === */
+.footer .footer-top {
+  padding: 60px 0;
+}
+
+.footer .footer-top ul h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  display: inline-block;
+  border-bottom: 1px solid #c6c5c2;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+
+.footer .footer-top ul li {
+  padding: 8px 0;
+}
+
+.footer .footer-top ul li span {
+  color: #E27A1F;
+  margin-right: 10px;
+}
+
+.footer .footer-top ul li a {
+  color: #767675;
+  font-size: 16px;
+}
+
+.footer .footer-top ul li a:hover {
+  color: #E27A1F;
+  text-decoration: underline;
+}
+
+.footer .footer-top .footer-logo {
+  max-width: 220px;
+}
+
+.footer .footer-top .footer-text {
+  font-size: 16px;
+  color: #4d4d4d;
+  padding: 20px 0;
+}
+
+.footer .footer-bottom {
+  padding: 25px 0 20px 0;
+}
+
+.footer .footer-bottom p {
+  font-size: 16px;
+  color: #4d4d4d;
+}
+
+.footer .footer-bottom .social-link li a {
+  padding: 0 15px;
+  color: #666;
+  transition: all 0.2s linear;
+}
+
+.footer .footer-bottom .social-link li a:hover {
+  color: #E27A1F;
+}
+
+.footer .footer-bottom .social-link .btn {
+  margin-left: 30px;
+  padding: 0;
+  font-size: 20px;
+}
+
+.footer .footer-bottom .social-link .btn:hover {
+  color: #E27A1F;
+}
+
+/*===// end of footer section === */

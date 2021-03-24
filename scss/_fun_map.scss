@@ -1,0 +1,104 @@
+.fun-map {
+  padding: 80px 0;
+
+  .fun-para {
+    padding: 40px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #626262;
+  }
+
+  .fun-slider {
+    .prev-arrow ,
+    .next-arrow {
+      width: 40px;
+      height: 40px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      font-size: 25px;
+      line-height: 37px;
+      color: $white;
+      text-align: center;
+      background: transparent;
+      position: absolute;
+      cursor: pointer;
+      transition: all 0.3s linear;
+    }
+
+    .prev-arrow:hover,
+    .next-arrow:hover {
+      color: $orange;
+      border-color: transparent;
+    }
+
+    .prev-arrow{
+      top: 50%;
+      left: 3%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+    .next-arrow{
+      top: 50%;
+      right: 3%;
+      transform: translateY(-50%);
+    }
+
+    .slick-dots li{
+      display: inline-block;
+      padding: 5px;
+    }
+
+    .slick-dots{
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .slick-dots button{
+      font-size: 0;
+      width: 12px;
+      height: 12px;
+      background: transparent;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      outline: 0;
+    }
+
+    .slick-dots .slick-active button {
+      background: $orange;
+      border-color: $orange
+    }
+    /* slick slider css end */
+  }
+
+  .map {
+    h3 {
+      font-family: "PT Serif";
+      font-size: 36px;
+      line-height: 46px;
+      font-weight: 000;
+      color: #000;
+      white-space: pre-line;
+      padding-left: 30px;
+    }
+
+    .btn-light {
+      background: #eeedea;
+      font-family: serif;
+      font-size: 16px;
+      border-radius: 0;
+      color: $dark;
+      margin: 20px 0;
+      border: none;
+      white-space: nowrap;
+      padding: 12px 25px;
+
+      &:hover {
+        background: #eae8e5;
+        border: none;
+      }
+    }
+  }
+}

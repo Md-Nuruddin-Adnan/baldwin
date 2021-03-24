@@ -1,0 +1,63 @@
+.side-bar {
+  width: 320px;
+  height: 100vh;
+  background: $dark;
+  color: $white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: all 0.3s linear;
+  z-index: 99999;
+
+  &.hidden {
+    right: -320px;
+  }
+
+  
+
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+  
+    .toggler-btn {
+      width: 80px;
+      border-radius: 0;
+      background: #000;
+      color: $white;
+      position: absolute;
+      top: 55%;
+      left: -80px;
+      // transform: translateY(-50%);
+      z-index: 1;
+      padding-left: 0;
+      padding-right: 0;
+
+      @keyframes opacityChange {
+
+        0%   {opacity: 1;}
+        25%  {opacity: .75}
+        // 50%  {opacity: .6}
+        // 75%  {opacity: .5}
+        100% {opacity: 1}
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        -webkit-animation: opacityChange 2s ease infinite;
+        animation: opacityChange 2s linear infinite;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        -webkit-animation: opacityChange 2s ease infinite;
+        animation: opacityChange 2s linear infinite;
+      }
+    }
+  }
+
+  
+}
